@@ -1,5 +1,20 @@
 
-
+/*
+ * This is a sample Line bot.
+ *
+ * # RUN THIS BOT:
+ *
+ *   1. Setup your Line account
+ *
+ *   2. Run from command line:
+ *
+ *   	CHANNEL_ID=<YOUR_CHANNEL_ID> CHANNEL_SECRET=<YOUR_CHANNEL_SECRET> CHANNEL_ACCESS_TOKEN=<YOUR_CHANNEL_ACCESS_TOKEN> node sample-bot.js
+ *
+ *   3. Listen to port 3000
+ *
+ * # This sample is modified from https://github.com/boybundit/linebot
+ *
+ */
 const linebot = require('./LineBot.js');
 
 const bot = linebot({
@@ -34,9 +49,6 @@ bot.on('message', function (event) {
 						longitude: 100.5298698
 					});
 					break;
-				case 'Push':
-					bot.push('U6350b7606935db981705282747c82ee1', ['Hey!', 'สวัสดี ' + String.fromCharCode(0xD83D, 0xDE01)]);
-					break;
 				case 'Confirm':
 					event.reply({
 						type: 'template',
@@ -58,9 +70,6 @@ bot.on('message', function (event) {
 					break;
 				case 'Multiple':
 					return event.reply(['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5']);
-					break;
-				case 'Version':
-					event.reply('linebot@' + require('../package.json').version);
 					break;
 				default:
 					event.reply(event.message.text).then(function (data) {
