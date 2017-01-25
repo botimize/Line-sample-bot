@@ -2,12 +2,13 @@ This sample-bot uses [linebot](https://github.com/boybundit/linebot) framework
 
 ## Documentation
 
--[Line Messaging API](https://devdocs.line.me/en/)
+- [Line Messaging API](https://devdocs.line.me/en/)
 
 ## Channel token
 
-To start [Messaging API](https://business.line.me/zh-hant/services/bot),
-Get Channel ID,Secret,Token [Document](https://developers.line.me/messaging-api/getting-started)
+- To start [Messaging API](https://business.line.me/zh-hant/services/bot)
+
+- Get Channel ID,Secret,Token [Document](https://developers.line.me/messaging-api/getting-started)
 
 ## Example
   
